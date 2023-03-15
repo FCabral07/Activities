@@ -1,0 +1,39 @@
+<!-- Faça um documento HTML que permita ao usuário digitar seu
+RG e CPF. Como tais campos são obrigatórios, faça um script
+que verifica se os campos realmente foram preenchidos. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body onload="exigeAtencao()">
+
+    <script>
+        // Criando funções que exijam a obrigatoriedade dos campos CPF e RG, e
+        // criando as funções que irei receber esses campos
+        function exigeAtencao(){
+            alert("Digite o seu CPF e o RG nos campos abaixo");
+        }
+
+        function digitarCPF(CPF){
+            if(CPF.value == ""){
+                alert("Campo obrigatório");
+            }
+        }
+
+        function digitarRG(RG){
+            if(RG.value == ""){
+                alert("Campo obrigatório");
+            }
+        }
+    </script>
+
+    <!-- Recebendo os dados do user -->
+    RG: <input type="text" id="RG" onblur="digitarCPF(this)">
+    CPF: <input type="text" id="CPF" onblur="digitarRG(this)">
+    
+</body>
+</html>

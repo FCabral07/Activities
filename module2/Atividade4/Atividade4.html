@@ -1,0 +1,54 @@
+<!-- Faça um algoritmo que lê o código correspondente ao cargo
+de um funcionário, seu salário atual e escreva o cargo
+correspondente, o valor do aumento e seu novo salário. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+</head>
+<body>
+    <script>
+        // Leitura do código do cargo e salário atual
+        const codigoCargo = parseInt(prompt("Digite o código do cargo (1 a 5): "));
+        const salarioAtual = parseFloat(prompt("Digite o salário atual: "));
+
+        // Definição do cargo, percentual de aumento e novo salário
+        let cargo, percentualAumento, novoSalario;
+        switch (codigoCargo) {
+        case 1:
+            cargo = "ESCRITURÁRIO";
+            percentualAumento = 50;
+            break;
+        case 2:
+            cargo = "SECRETÁRIO";
+            percentualAumento = 35;
+            break;
+        case 3:
+            cargo = "CAIXA";
+            percentualAumento = 20;
+            break;
+        case 4:
+            cargo = "GERENTE";
+            percentualAumento = 10;
+            break;
+        case 5:
+            cargo = "DIRETOR";
+            percentualAumento = 0;
+            break;
+        default:
+            cargo = "Código de cargo inválido";
+            percentualAumento = 0;
+        }
+
+        novoSalario = salarioAtual * (1 + percentualAumento/100);
+
+        // Exibição dos resultados
+        alert("O seu cargo: " + cargo);
+        alert("Valor do aumento: " + (novoSalario - salarioAtual).toFixed(2));
+        alert("Novo salário: " + novoSalario.toFixed(2));
+    </script>
+</body>
+</html>

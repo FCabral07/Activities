@@ -1,0 +1,32 @@
+/* Algo bem básico, feito em aula, só para não fica com tudo branco, 
+no padrão do documento. */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: aqua;
+}
+  
+input[type="text"] {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 30px;
+} 
+  
+#operador {
+    margin-top: 30px;
+}
+  
+button {
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+  
